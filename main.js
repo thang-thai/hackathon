@@ -37,6 +37,7 @@ const parentDiv = document.querySelector("#hs_cos_wrapper_DND_banner-module-1");
 const bannerWrapper = document.querySelector(".banner-wrapper");
 const pigImg = document.createElement("div");
 
+pigImg.classList.add("piggies");
 pigImg.style.minHeight = "60vh";
 pigImg.style.maxHeight = "100vh";
 pigImg.style.position = "relative";
@@ -105,4 +106,18 @@ function pigLatin(string) {
   return pigLatinArray.join(" ");
 }
 
-// Rotate Images
+// Add button for "Cuteness Overload" to Make images go crazy
+const overloadBtn = document.createElement("button");
+overloadBtn.innerText = "CUTENESS OVERLOAD!";
+overloadBtn.style.fontSize = "40px";
+overloadBtn.style.border = "3px solid pink";
+overloadBtn.style.height = "auto";
+overloadBtn.style.width = "auto";
+overloadBtn.style.position = "absolute";
+overloadBtn.style.top = "50%";
+overloadBtn.style.left = "50%";
+overloadBtn.style.transform = "translate(-50%,-50%)";
+
+pigImg.appendChild(overloadBtn);
+
+// Change cursor to pig photo
