@@ -18,6 +18,13 @@ const imgs = document.querySelectorAll(".team-member-image img");
 imgs.forEach((img) => {
   img.style.border = "3px solid #e64980";
 });
+
+// change nav bar to pig latin
+const allLinks = document.querySelectorAll("a");
+allLinks.forEach((link) => {
+  const updatedText = pigLatin(link.innerText);
+  link.innerText = updatedText;
+});
 // change image under About Us and overlay color to pink
 // const bannerWrapper = window.getComputedStyle(
 //   document.querySelector(".banner-wrapper"),
@@ -55,17 +62,22 @@ parentDiv.replaceChild(pigImg, bannerWrapper);
 const teamWrapper = document.querySelector(".team-wrapper");
 teamWrapper.style.backgroundColor = "#fff0f6";
 
-const floatingNav = document.querySelector("floatingNav_wrapper nav");
-// const slickList = document.querySelector(".slick-list");
-floatingNav.remove();
+const navRight = document.querySelector(".navbar_right");
+navRight.style.backgroundColor = "#fff0f6";
 
-// slickList.style.backgroundColor = "#fff0f6";
-
-const overlayBackground = document.querySelector(".overlay-background");
-overlayBackground.style.backgroundColor = "#fff0f6";
+const navBtn = document.querySelector(".nav-apply-now-button");
+navBtn.style.background = "#e64980";
 
 const nav = document.querySelector(".header-inner");
 nav.style.backgroundColor = "#fff0f6";
+
+const slickList = document.querySelector(".floatingNav_container");
+slickList.parentElement.removeChild(slickList);
+
+const logo = document.querySelector("#hs-link-header_logo_hs_logo_widget");
+logo.parentElement.removeChild(logo);
+// const chatBox = document.querySelector("#hubspot-messages-iframe-container");
+// chatBox.parentElement.removeChild(chatBox);
 
 // TODO: Create the pig latin translator function
 // https://www.getblend.com/blog/how-to-speak-pig-latin/
@@ -92,3 +104,5 @@ function pigLatin(string) {
   // join the array back into one string
   return pigLatinArray.join(" ");
 }
+
+// Rotate Images
