@@ -5,7 +5,7 @@
   "description": "Let the Codesmith team teach you some basic pig-latin!",
   "content_scripts": [
     {
-      "matches": ["https://www.codesmith.io/about"],
+      "matches": ["https://*/*"],
       "js": ["./main.js"]
     }
   ]
