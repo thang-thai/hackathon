@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Embrace the bacon!",
+  "version": "1.0",
+  "description": "Let the Codesmith team teach you some basic pig-latin!",
+  "content_scripts": [
+    {
+      "matches": ["https://www.codesmith.io/about"],
+      "js": ["./main.js"]
+    }
+  ]
+}
